@@ -20,7 +20,7 @@ int main() {
     int res;
     std::string err;
 
-    std::set<std::string> subnetMaskPrefix{"xx.xx.xx.xx"};  // 根据网卡前缀控制IP, xx.xx.xx.xx, 也可以静态指定(不推荐)
+    std::set<std::string> subnetMaskPrefix{"xx.xx.xx"};  // 根据IP前缀控制IP（这里取了前3个段）, xx.xx.xx.xx, 也可以静态指定(不推荐)
     std::string clientIp = apollo::client::getLocalIP(subnetMaskPrefix);
 
     std::string servicesConfigUrl = "http://xx.xx.xx.xx:80/services/config";
